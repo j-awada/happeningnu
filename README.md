@@ -1,8 +1,8 @@
 # Happening nu
 
-Comming soon.
+Coming soon.
 
-## Project setup history
+### Project setup history
 
 ```Bash
 $ rustc --version
