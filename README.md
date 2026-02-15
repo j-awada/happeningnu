@@ -8,7 +8,7 @@ Coming soon.
 $ rustc --version
 #rustc 1.91.1 (ed61e7d7e 2025-11-07)
 
-$  rustup --version
+$ rustup --version
 #rustup 1.28.2 (e4f3ad6f8 2025-04-28)
 #info: This is the version for the rustup toolchain manager, not the rustc compiler.
 #info: The currently active `rustc` version is `rustc 1.91.1 (ed61e7d7e 2025-11-07)`
@@ -37,10 +37,38 @@ cargo add tower-sessions-sqlx-store -F sqlite
 cargo add argon2
 cargo add chrono
 cargo add serde_json
-
 ```
 
 ```Bash
 brew install cargo-watch
 cargo watch -x run
+```
+
+## Database setup
+
+```Bash
+# Initialise migrations folder (done once)
+sea-orm-cli migrate init
+
+# Generate migrations (optional)
+sea-orm-cli migrate generate create_initial_schema
+
+# Edit migrations file
+
+# You have to manually add "sqlx-sqlite" and "runtime-tokio-rustls" to the sea-orm-migration features in toml under migration/
+
+# Create the db.sqlite file in the root directory
+
+# Run migrations to create tables
+sea-orm-cli migrate up -u sqlite://db.sqlite
+
+# Check tables in the database
+sqlite3 db.sqlite
+.tables
+.schema users
+.quit
+
+# Generate entities
+# Those are used as an ORM to interact with the database
+sea-orm-cli generate entity -u sqlite://db.sqlite -o src/entities
 ```
