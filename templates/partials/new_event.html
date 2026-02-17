@@ -1,0 +1,63 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+{% include "partials/flash.html" %}
+
+<table class="main_table" cellpadding="0" cellspacing="0">
+    {% include "partials/navbar.html" %}
+</table>
+
+<main class="form_main" id="new_event_form">
+<h1>{{ title }}</h1>
+
+<form method="POST" action="/new_event">
+    <table>
+        <tr>
+            <td>title</td>
+            <td>
+                <input type="text" name="title" id="title" autocorrect="off" spellcheck="false" autocapitalize="off" autofocus="true" required>
+            </td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <input type="text" name="url" id="url" autocorrect="off" spellcheck="false" autocapitalize="off" autofocus="true" required>
+            </td>
+        </tr>
+        <tr>
+            <td>location</td>
+            <td>
+                <select name="location" id="location" required>
+                    <option value="" disabled selected>-</option>
+                    {% for city in event_locations %}
+                        <option value="{{ city }}">{{ city }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>date</td>
+            <td>
+                <input type="text" name="date" id="date" autocorrect="off" spellcheck="false" autocapitalize="off" autofocus="true" placeholder="YYYY-MM-DD" required>
+            </td>
+        </tr>
+        <tr>
+            <td>category</td>
+            <td>
+                <select name="category" id="category" required>
+                    <option value="" disabled selected>-</option>
+                    {% for category in event_categories %}
+                        <option value="{{ category }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <input class="form_submit_btn" type="submit" value="create">
+</form>
+<a href="/">Home</a>
+</main>
+
+{% include "partials/footer.html" %}
+{% endblock content %}

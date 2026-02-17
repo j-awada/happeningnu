@@ -1,0 +1,41 @@
+<tr>
+    <td class="main_td">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="logo_in_header">
+                    <a href="/"><img src="/assets/images/hn-logo.svg" width="18" height="18"></a>
+                </td>
+                <td class="td1">
+                    <span class="pagetop">
+                        {% if is_logged_in %}
+                        <span><b>Hi {{ logged_in_username }}! - Events</b></span>
+                        {% else %}
+                        <span><b>Events</b></span>
+                        {% endif %}
+                        <span>👇</span>
+                    </span>
+                </td>
+                <td class="td2">
+                    <span class="pagetop">
+                        <span class="pagetop">
+                            {% if is_logged_in %}
+                                {% if not_home %}
+                                <a href="/">home</a>
+                                <span class="event_info_divider">|</span>
+                                {% else %}
+                                <a href="/user_events">my events</a>
+                                <span class="event_info_divider">|</span>
+                                {% endif %}
+                                <a href="/new_event">new event</a>
+                                <span class="event_info_divider">|</span>
+                                <a href="/logout">log out</a>
+                            {% else %}
+                                <a href="/login">log in</a>
+                            {% endif %}
+                        </span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>

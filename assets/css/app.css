@@ -1,0 +1,250 @@
+html {
+    background-color: #fffdf5;
+}
+
+body {
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fffdf5;
+    z-index: 100;
+}
+
+#footer_div {
+    display: inline-block;
+}
+
+#footer_text {
+    vertical-align: middle;
+    font-family: "Barriecito", system-ui;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#footer_img {
+    vertical-align: middle;
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 0;
+}
+
+.events_main {
+    min-height: calc(80vh - 60px);
+    background-image: url('/assets/images/doodle-1.png'), url('/assets/images/doodle-2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 20%, right 20%;
+    background-size: 150px auto, 150px auto;
+}
+
+/* Login and Signup forms */
+
+.form_main {
+    text-align: center;
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*
+centers the table horizontally within its parent container
+*/
+.form_main table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_submit_btn {
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    padding: 5px;
+}
+
+.form_submit_btn:hover {
+    cursor: pointer;
+}
+
+input {
+    padding: 5px;
+}
+
+#new_event_form input[type="text"],
+#new_event_form select {
+    width: 40ch;
+    padding: 5px;
+    box-sizing: border-box; /* ensures padding and border are included in the width */
+    font-family: inherit;
+    font-size: inherit;
+}
+/* end login and signup forms */
+
+.main_table {
+    width: 75%;
+    margin: 0 auto;
+    overflow-x: scroll;
+}
+
+.logo_in_header {
+    width: 18px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.logo_in_header img {
+    display: block;
+    background-color: #312e2d;
+    padding: 1px;
+}
+
+.pagetop a {
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+.nested_table_1 {
+    width: 100%;
+    font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main_table table {
+    width: 100%;
+    padding: 2px;
+}
+
+.main_td {
+    background-color: #b1d8b7;
+    height: 50px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.events_heading:nth-child(even) {
+    background-color: #e8e8e9;
+    padding: 1rem;
+}
+
+.events_heading:nth-child(odd) {
+    background-color: #f4f6fc;
+}
+
+.td1 {
+    line-height:12pt;
+    height:10px;
+    padding: 3px;
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.td2 {
+    text-align: right;
+    padding-right: 4px;
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titleline a {
+    font-size: 0.75em;
+    color: #222;
+    text-decoration: none;
+}
+
+.user_status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.going-btn {
+    background: none;
+    border: none;
+    color: #828282;
+    font-size: 0.95em;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #828282;
+    font-size: 0.95em;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.event_info_item {
+    color: #828282;
+    font-size: 0.75em;
+}
+
+.event_info_divider {
+    color: #828282;
+    font-size: 0.95em;
+}
+
+@media (max-width: 1024px) {
+    .events_main {
+        background-image: none !important;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        font-size: 0.60em !important;
+        overflow-x: scroll;
+    }
+    .main_table {
+        width: 90%;
+        margin: 0 auto;
+        overflow-x: scroll;
+    }
+
+    .nested_table_1 {
+        width: 90%;
+        margin: 0 auto;
+        overflow-x: scroll;
+    }
+
+    .events_main {
+        background-image: none !important;
+    }
+
+    .form_main {
+        width: 100%;
+        max-width: 100vw;
+        margin: 0 auto;
+        overflow-x: scroll;
+    }
+
+    input {
+        padding: 3px;
+    }
+
+    #new_event_form input[type="text"],
+    #new_event_form select {
+        width: 100%;
+        max-width: 100%;
+        padding: 3px;
+        box-sizing: border-box; /* ensures padding and border are included in the width */
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    #footer_img {
+        width: 26px !important;
+        height: 26px !important;
+    }
+}

@@ -1,0 +1,46 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+{% include "partials/flash.html" %}
+
+<main class="events_main">
+<table class="main_table" cellpadding="0" cellspacing="0">
+    {% include "partials/navbar.html" %}
+    <tr>
+        <td>
+            <table class="nested_table_1" border="0" cellpadding="0" cellspacing="0">
+                {% for event in user_events %}
+                    <tr class="events_heading">
+                    <td align="right" valign="top" class="title"><span class="rank">&nbsp;</span></td>
+                    <td class="title">
+                        <span class="titleline" align="right" valign="top">
+                            <a target="_blank" href="{{ event.url }}">{{ event.title }}</a>
+                        </span>
+                        <div class="user_status">
+                            <form method="POST" action="/event/{{ event.id }}/delete">
+                                <button 
+                                    class="delete-btn"
+                                    type="submit"
+                                    title="Delete">
+                                    🗑️
+                                </button>
+                            </form>
+                            <span class="event_info_item" id="attendee-count-{{ event.id }}">Going: {{ event.attendee_count }}</span>
+                            <span class="event_info_divider">|</span>
+                            <span class="event_info_item">{{ event.date }}</span>
+                            <span class="event_info_divider">|</span>
+                            <span class="event_info_item">{{ event.location }}</span>
+                            <span class="event_info_divider">|</span>
+                            <span class="event_info_item">{{ event.category }}</span>
+                        </div>
+                    </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </td>
+    </tr>
+</table>
+</main>
+
+{% include "partials/footer.html" %}
+{% endblock content %}
