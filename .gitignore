@@ -1,3 +1,10 @@
 /target
 */target
+.env
 db.sqlite
+scratch.txt
+migration/target/
+migration/*.d
+migration/*.rlib
+migration/migration
+*.pem
