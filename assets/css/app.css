@@ -38,6 +38,7 @@ footer {
 
 .events_main {
     min-height: calc(80vh - 60px);
+    margin-bottom: 20px;
 /*    background-image: url('/assets/images/doodle-1.png'), url('/assets/images/doodle-2.png');*/
 /*    background-repeat: no-repeat, no-repeat;*/
 /*    background-position: left 20%, right 20%;*/
