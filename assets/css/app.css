@@ -126,7 +126,7 @@ input {
 .main_td {
     background-color: #b1d8b7;
     height: 50px;
-    border-radius: 16px;
+    /*border-radius: 16px;*/
     overflow: hidden;
 }
 
