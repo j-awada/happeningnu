@@ -8,3 +8,4 @@ migration/*.d
 migration/*.rlib
 migration/migration
 *.pem
+.setup
