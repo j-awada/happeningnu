@@ -9,11 +9,16 @@
     <tr>
         <td>
             <div class="event_toolbar">
-                <!-- filter controls go here -->
+                <select id="category-filter" class="category-filter" onchange="filterEventsByCategory(this.value)">
+                    <option value="">All categories</option>
+                    {% for event in all_events | unique(attribute="category") %}
+                        <option value="{{ event.category }}">{{ event.category }}</option>
+                    {% endfor %}
+                </select>
             </div>
             <div class="event_grid">
                 {% for event in all_events %}
-                    <div class="event_card">
+                    <div class="event_card" data-category="{{ event.category }}">
                         <div class="event_card_header">
                             <a class="event_card_title" target="_blank" href="{{ event.url }}">{{ event.title }}</a>
                         </div>

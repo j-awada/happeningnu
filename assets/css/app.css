@@ -168,6 +168,18 @@ input {
 .event_toolbar {
     min-height: 2.5rem;
     margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.category-filter {
+    font-family: "Barrio", system-ui;
+    font-size: 0.7em;
+    padding: 6px 10px;
+    border: 1px solid #b1d8b7;
+    border-radius: 999px;
+    background: #fff;
+    color: #1f3d24;
 }
 
 .event_grid {
