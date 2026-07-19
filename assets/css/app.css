@@ -1,5 +1,10 @@
 html {
-    background-color: #fffdf5;
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(177, 216, 183, 0.5) 1.5px, transparent 0),
+        radial-gradient(circle at 12px 12px, rgba(241, 196, 83, 0.3) 1px, transparent 0),
+        linear-gradient(160deg, #fffdf5 0%, #eef7ef 100%);
+    background-size: 24px 24px, 24px 24px, 100% 100%;
+    background-attachment: fixed, fixed, fixed;
 }
 
 body {
@@ -14,7 +19,7 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    background: #fffdf5;
+    background: linear-gradient(160deg, #fffdf5 0%, #eef7ef 100%);
     z-index: 100;
 }
 
