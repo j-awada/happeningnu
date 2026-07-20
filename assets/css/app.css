@@ -54,7 +54,7 @@ footer {
 
 .form_main {
     text-align: center;
-    font-family: "Barrio", system-ui;
+    font-family: "Truculenta", system-ui;
     font-weight: 400;
     font-style: normal;
 }
@@ -68,7 +68,7 @@ centers the table horizontally within its parent container
 }
 
 .form_submit_btn {
-    font-family: "Barrio", system-ui;
+    font-family: "Truculenta", system-ui;
     font-weight: 400;
     font-style: normal;
     padding: 5px;
@@ -178,7 +178,7 @@ input {
 }
 
 .category-filter {
-    font-family: "Barrio", system-ui;
+    font-family: "Truculenta", system-ui;
     font-size: 0.7em;
     padding: 6px 10px;
     border: 1px solid #b1d8b7;
@@ -216,7 +216,7 @@ input {
 }
 
 .event_card_title {
-    font-family: "Barrio", system-ui;
+    font-family: "Truculenta", system-ui;
     font-size: 1em;
     font-weight: 400;
     color: #222;
@@ -266,7 +266,7 @@ input {
     line-height:12pt;
     height:10px;
     padding: 3px;
-    font-family: "Barrio", system-ui;
+    font-family: "Truculenta", system-ui;
     font-weight: 400;
     font-style: normal;
 }
@@ -274,7 +274,7 @@ input {
 .td2 {
     text-align: right;
     padding-right: 4px;
-    font-family: "Barrio", system-ui;
+    font-family: "Truculenta", system-ui;
     font-weight: 400;
     font-style: normal;
 }
